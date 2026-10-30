@@ -1,0 +1,117 @@
+{
+  "metadata": {
+    "source": "global_bleaching_environmental.csv",
+    "total_records_analyzed": 34393,
+    "generated_at": "2026-10-29"
+  },
+  "ols_regression": {
+    "n_samples": 34393,
+    "beta_0": 7.5322,
+    "beta_1_ssta": 0.8065,
+    "beta_2_tsa_dhw": 1.4741,
+    "se_beta_0": 0.1138,
+    "se_beta_1": 0.1335,
+    "se_beta_2": 0.031,
+    "t_beta_0": 66.17,
+    "t_beta_1": 6.04,
+    "t_beta_2": 47.53,
+    "r_squared": 0.075,
+    "adj_r_squared": 0.075,
+    "f_statistic": 1394.49,
+    "mean_bleaching_pct": 9.63,
+    "p_value_model": "< 0.0001"
+  },
+  "chi_square_test": {
+    "n_samples": 34393,
+    "degrees_of_freedom": 4,
+    "chi2_statistic": 156.71,
+    "critical_value_05": 9.488,
+    "p_value": "< 0.00001",
+    "hypothesis_result": "Reject H0 (Bleaching is strongly dependent on Turbidity)",
+    "turbidity_tertiles": [
+      0.0445,
+      0.0731
+    ],
+    "observed_table": [
+      [
+        8607,
+        1950,
+        894
+      ],
+      [
+        9222,
+        1531,
+        692
+      ],
+      [
+        9310,
+        1411,
+        776
+      ]
+    ],
+    "expected_table": [
+      [
+        9035.8,
+        1628.8,
+        786.4
+      ],
+      [
+        9031.1,
+        1627.9,
+        786.0
+      ],
+      [
+        9072.1,
+        1635.3,
+        789.6
+      ]
+    ],
+    "row_totals": [
+      11451,
+      11445,
+      11497
+    ],
+    "col_totals": [
+      27139,
+      4892,
+      2362
+    ],
+    "categories_turbidity": [
+      "Low (< 0.0445)",
+      "Med (0.0445 - 0.0731)",
+      "High (> 0.0731)"
+    ],
+    "categories_bleaching": [
+      "Healthy (< 10%)",
+      "Stressed (10 - 50%)",
+      "Severe (> 50%)"
+    ],
+    "conditional_multiplier_wpollution": 1.35
+  },
+  "dtmc_config": {
+    "states": [
+      "Healthy",
+      "Stressed",
+      "Bleached",
+      "Dead"
+    ],
+    "state_colors": [
+      "#10B981",
+      "#F59E0B",
+      "#F43F5E",
+      "#334155"
+    ],
+    "base_gammas": [
+      -2.2,
+      -1.1,
+      -0.6
+    ],
+    "base_recovery": [
+      0.45,
+      0.28
+    ],
+    "ols_beta_ssta": 0.8065,
+    "ols_beta_tsa_dhw": 1.4741,
+    "chi2_turbidity_multiplier": 1.35
+  }
+}
